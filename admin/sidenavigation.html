@@ -1,0 +1,55 @@
+
+<style>
+.sidenav{
+height:100%;
+width:0%;
+position:fixed;
+z-index:1;
+top:0;
+left:0px;
+background-color:#111;
+overflow-x:hidden;
+padding-top:60px;
+transition: 0.5s;
+}
+.sidenav a{
+padding:8px 8px 8px 32px;
+text-decoration:none;
+font-size:24px;
+color:#818181;
+display:block;
+transform:0.3s;
+}
+.sidenav a:hover{
+color:#f1f1f1;
+}
+.sidenav .closebtn{
+position:absolute;
+top:0;
+right:25px;
+font-size:36px;
+margin-left:50px;
+}
+</style>
+<script type="text/javascript">
+function opennav()
+{
+	document.getElementById("myslideshow").style.width="250px";
+}
+function closenav()
+{
+	document.getElementById("myslideshow").style.width="0px";
+}
+
+</script>
+<section class="sildenavigation">
+	<div id="myslideshow" class="sidenav">
+    	<a href="javascript:void(0)" class="closebtn" onclick="closenav()">&times;</a>
+        <a href="home.php">Home </a>
+        <a href="uhome.php">Discussion form </a>
+        <a href="adminquestion.php">question bank </a>
+        <a href="user.php">Users</a>
+        <a href="aedit.php">Profile</a>
+    </div>
+    <img src="../Images/sidenav.JPG" onclick="opennav()"></img>
+</section>

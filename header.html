@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<title>R.P.Bhalodia College :: Home</title>
+<!-- Full Screen-->
+<meta name="viewpoint" content="width=device-width, init-scale=1.0">
+<!-- icon -->
+<link href="images (3).jpg" rel="icon">
+<!-- Stylesheet -->
+<link href="Stylesheet/style.css" rel="stylesheet">
+<script type="text/javascript">
+var modal=document.getElementById('id01');
+var modal2=document.getElementById('id02');
+//when the user click anywhere outside of the model,
+	}close it
+window.onclick=function(event)
+{
+	if(event.target==modal)
+	{
+		modal.style.display="none";
+}
+window.onclick=function(event)
+{
+	if(event.target==modal2)
+	{
+		modal2.style.display="none";
+	}
+}
+//show Password 
+function myFunction()
+{
+	var x=document.getElementById("myInput");
+	if(x.type=="password")
+	{
+		x.type="text";
+	}
+	else
+	{
+		x.type="password";
+	}
+}
+//Login Page Validation
+function check(f)
+{
+	if(f.uname.value=="")
+	{
+		document.getElementById("spuid").innerHTML="Please,Enter User Id";
+		document.getElementById("a").innerHTML="";
+		f.uname.focus();
+		return false;
+	}
+	else if(f.psw.value=="")
+	{
+		document.getElementById("spuid").innerHTML="";
+		document.getElementById("a").innerHTML="Please,Enter Password ";
+		f.uname.focus();
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+}
+function check1(form1)
+		{
+			if(form1.fname.value==""||form1.surname.value==""||form1.uname.value==""||form1.enroll.value==""||form1.psw.value==""||form1.repsw.value==""||form1.email.value==""||form1.address.value==""||form1.mobile.value=="")
+			{
+				if(form1.fname.value=="")
+				{
+					document.getElementById("a").innerHTML="Please, Enter name.";
+					//alert("please enter the username");
+					
+					form1.fname.form1.focus();
+				}
+				else
+				{
+					document.getElementById("a").innerHTML="";
+					////alert("please enter the username");
+					form1.fname.focus();
+				}
+				if(form1.surname.value=="")
+				{
+					document.getElementById("b").innerHTML="Please, Enter Surname.";
+					//alert("please enter the Fullname");
+					form1.surname.form1.focus();
+				}
+				else
+				{
+					document.getElementById("b").innerHTML="";
+					////alert("please enter the Fullname");
+					form1.surname.focus();
+				}			
+				if(form1.uname.value=="")
+				{
+					document.getElementById("c").innerHTML="Please, Enter Username.";
+					//alert("please enter the Username");
+					form1.uname.form1.focus();
+				}
+				else
+				{
+					document.getElementById("c").innerHTML="";
+					////alert("please enter the Username");
+					form1.uname.focus();
+				}
+				if(form1.enroll.value=="")
+				{
+					document.getElementById("d").innerHTML="Please,Enter Enrollment number.";
+					//alert("please enter the Fullname");
+					form1.enroll.focus();
+				}
+				else
+				{
+					document.getElementById("d").innerHTML="";
+					////alert("please enter the Fullname");
+					form1.enroll.focus();
+				}
+				if(form1.psw.value=="")
+				{
+					document.getElementById("e").innerHTML="Please, Enter password.";
+					//alert("please enter the Fullname");
+					form1.psw.focus();
+				}
+				else
+				{
+					document.getElementById("e").innerHTML="";
+					////alert("please enter the Fullname");
+					form1.psw.focus();
+				}
+				if(form1.repsw.value=="")
+				{
+					document.getElementById("f").innerHTML="Please, Enter Confirm Password.";
+					//alert("please enter the Fullname");
+					form1.repsw.focus();
+				}
+				else
+				{
+					document.getElementById("f").innerHTML="";
+					////alert("please enter the Fullname");
+					form1.repsw.focus();
+				}
+				
+				if(form1.email.value=="")
+				{
+					document.getElementById("g").innerHTML="Please, Enter Email.";
+					//alert("please enter the Fullname");
+					form1.email.focus();
+				}
+				else
+				{
+					document.getElementById("g").innerHTML="";
+					////alert("please enter the Fullname");
+					form1.email.focus();
+				}
+				
+				if(form1.address.value=="")
+				{
+					document.getElementById("h").innerHTML="Please,Enter Address.";
+					//alert("please enter the Fullname");
+					form1.address.focus();
+				}
+				else
+				{
+					document.getElementById("h").innerHTML="";
+					////alert("please enter the Fullname");
+					form1.address.focus();
+				}
+				
+				if(form1.mobile.value=="")
+				{
+					document.getElementById("i").innerHTML="Please, Enter mobile No.";
+					//alert("please enter the Fullname");
+					form1.mobile.focus();
+				}
+				else
+				{
+					document.getElementById("i").innerHTML="";
+					////alert("please enter the Fullname");
+					form1.mobile.focus();
+				}
+				return false;
+			}
+			else
+				return true;
+		}
+		function acceptY()
+{
+	var invalid=" "; //invalid character in Space
+	var minLength=8;
+	var maxLength=15;
+	var pws=document.forms[0].elements[3].value;
+	var pw=document.forms[0].elements[4].value;
+	
+	//check For Values
+	if(pw1==""||pw2=="")
+	{
+		alert("Please Enter Your Password Twice");
+		return false;
+	}
+	//minimum Length Of Password
+	if((document.forms[0].elements[3].value.length<minLength) && (document.forms[0].elements[3].value.length>maxLength))
+	{
+		alert("Your Password Must Be least " +minLength+" to "+maxLength+" Character Long\n Try Again");
+		document.forms[0].elements[3].value="";
+		document.forms[0].elements[4].value="";
+		document.forms[0].elements[3].focus();
+		return false;
+	}
+	//Check Spaces
+	if(document.forms[0].elements[3].value.indexOf(invalid)>-1)
+	{
+		alert("Sorry, Space Are Not Allowed");
+		document.forms[0].elements[3].value="";
+		document.forms[0].elements[4].value="";
+		document.forms[0].elements[3].focus();
+		return false;
+	}
+	else
+	{
+		if(document.forms[0].elements[4].value.indexOf(invalid)>-1)
+		{
+			alert("Sorry, Space Are Not Allowed");
+			document.forms[0].elements[3].value="";
+			document.forms[0].elements[4].value="";
+			document.forms[0].elements[3].focus();
+			return false;
+		}
+		else
+		{
+			if(pw1!=pw2)
+			{
+				alert("You did not Enter The Same Password.\nPlease re-enter Your Password");
+				document.forms[0].elements[3].value="";
+				document.forms[0].elements[4].value="";
+				document.forms[0].elements[3].focus();
+				return false;
+			}
+			else{return true;}
+		}
+	}
+}
+</script>
+</head>
+<body>
+		<header id="header">
+        	<div class="container">
+            	<div id="logo" class="pull-left">
+                		<h1><a href="index.php"> <img src="Images/rpbc.png" /><span> R.P.Bhalodia College</span> </a></h1>
+                </div>
+                <nav id="nav-menu-container">
+                	<ul class="nav-menu">
+                    	<li><a href="index.php">Home</a></li>
+                      	<li><a href="syllabus.php">Matterial</a></li>
+                        <li><a href="uhome.php">Discussion Form</a></li>
+                        <li><a href="mainquestionpage.php">Quiz</a></li>
+                        <li><a href="#Notification">Notification</a></li>
+                        <li><a href="about.php">About</a></li>
+                        <li class="Login"><a href="#login" onClick="document.getElementById('id01').style.display='block'">Login</a></li>
+                        <li class="Login"><a href="#signUp" onClick="document.getElementById('id02').style.display='block'">Signup</a></li>  
+                    </ul>
+                    </nav>
+            </div>
+            </header>
+            <!-- Model --->
+            <div id="id01" class="modal">
+            	<span onClick="document.getElementById('id01').style.display='none'" class="close"
+ title="Close Modal">&times;</span>
+ 
+ 			<!--Model Content -->            
+            <form class="modal-content animate" action="#" onSubmit="return check(this)" enctype="multipart/form-data">
+            <div class="imgcontainer">
+            	<img src="Images/1.png" alt="Avatar" class="avater">
+            </div>
+            
+            <div class="container">
+            	<label for="uname"><b>Username </b></label>
+                <input type="text" placeholder="Enter Username" name="uname" class="input" pattern="[a-z0-9]{1,15}" title="Must Contain Lower Case And Number with max length 15 wit No Spaces">
+                <span id="spuid" style="color:#FF0000;"></span><br>
+                
+                <label for="psw"><b>Password </b></label>
+                <input type="password" placeholder="Enter Password" name="psw" class="input" id="myInput">
+                <span id="a" style="color:#FF0000;"></span>
+                
+                <input type="checkbox" onClick="myFunction()">Show Password<br>
+                
+                <button class="button" type="submit">Login</button>
+                <label style="margin-left:5px;">
+                	<input type="checkbox" name="remember">Remember me</label>
+                 <br>
+               	</div>
+                
+                <div class="container" style="background-color:#f1f1f1">
+                	<button type="button" class="button" onClick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                    <span class="psw">Forgot<a href="#" style="text-decoration:none"> <u>Password</u> ?</a></span>
+                </div>
+            </form>
+          </div>
+          
+          
+          <!-- Model2 --->
+            <div id="id02" class="modal2">
+            	<span onClick="document.getElementById('id02').style.display='none'" class="close"
+ title="Close Modal">&times;</span>
+ 
+ 			<!--Model Content -->            
+            <form class="modal-content animate" action="#" onSubmit="return check1(this)" enctype="multipart/form-data">
+            <div class="imgcontainer">
+            	<img src="Images/1.png" alt="Avatar" class="avater">
+            </div>
+            
+            <div class="container">
+            	<label for="fname"><b>Name </b></label>
+                <input type="text" placeholder="Enter Name" name="fname" class="input" pattern="[a-zA-Z\s]+" title="No Special character allowed and number allowed" style="margin-left:105px;"><br>
+                <span id="a" style="color:#FF0000;"></span><br>
+                
+                <label for="surname"><b>Surname </b></label>
+                <input type="text" placeholder="Enter Surname" name="surname" class="input" pattern="[a-zA-Z\s]+" title="No Special character allowed and number allowed" style="margin-left:80px;"><br>
+                <span id="b" style="color:#FF0000;"></span><br>
+                
+                <label for="uname"><b>Username </b></label>
+                <input type="text" placeholder="Enter Username" name="uname" class="input" pattern="[a-z0-9]{1,15}" title="Must Contain Lower Case And Number with max length 15 wit No Spaces" style="margin-left:65px;"><br>
+                <span id="c" style="color:#FF0000;"></span><br>
+                
+                <label for="Enroll"><b>Enroll No.</b></label>
+                <input type="text" placeholder="Enter EnrollMent Number" name="enroll" class="input" pattern="[0-9]{12}" style="margin-left:75px;" title="max 12 digits"><br>
+                <span id="d" style="color:#FF0000;"></span><br>
+                
+                <label for="psw"><b>Password </b></label>
+                <input type="password" placeholder="Enter Password" name="psw" class="input" id="myInput" style="margin-left:75px;" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}" ><input type="checkbox" onClick="myFunction()">Show Password<br>
+                <span id="e" style="color:#FF0000;margin-left:145px"></span><br>
+
+			<label for="Repsw"><b>Confirm Password</b></label>
+            <input type="password" placeholder="Enter confirm password" name="repsw" id="myInput" class="input" style="margin-left:10px;" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\S).{8,15}" onChange="acceptY()">
+            <input type="checkbox" onClick="myFunction()">Show Password<br> 
+            <span id="f" style="color:red;margin-left:145px"></span><br>
+                <br>
+                
+                <label for="email"><b>Email</b></label>
+            <input type="email" placeholder="Enter email" name="email"  class="input" style="margin-left:110px;" pattern="[a-z0-9._%+-]+@[a-z9-9.-]+\.[a-z]{2,}$">
+            <br>
+            <span id="g" style="color:red;margin-left:145px"></span><br>
+            
+                <label for="address" style="margin-top:-20px;"><b>Address</b></label>
+			<textarea cols="20" rows="3" placeholder="Enter Address" name="address" class="input" style="margin-left:85px;"></textarea>
+            <br>
+            <span id="h" style="color:red;margin-left:145px"></span><br>
+            
+                <label for="mobile"><b>Mobile</b></label>
+            <input type="text" placeholder="Enter mobile" name="mobile"  class="input" pattern="[\d]{10}" style="margin-left:100px">
+            <br>
+            <span id="i" style="color:red; margin-left:145px"></span><br>
+                
+                <button class="button1" type="submit">Login</button>
+                <button type="button" class="button1" onClick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+               	</div>
+            </form>
+          </div>
+                         
+   
+
